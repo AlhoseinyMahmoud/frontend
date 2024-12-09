@@ -1,0 +1,73 @@
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .card{
+    width: 23%;
+  }
+  
+  .cardBox .card {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cardBox .card .numbers {
+    position: relative;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 2em;
+  }
+  
+  .cardBox .card .cardName {
+    white-space: nowrap;
+    color: var(--black1);
+    font-size: 1em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+  
+  .cardBox .card .iconBox span {
+    color: var(--black2);
+    font-size: 2em;
+  }
+  
+  .cardBox .card .iconBox {
+    align-self: center;
+    margin-left: 5px;
+  }
+  
+  .cardBox .card:hover {
+    background-color: var(--blue);
+  }
+  
+  .cardBox .card:hover .numbers,
+  .cardBox .card:hover .iconBox span,
+  .cardBox .card:hover .cardName {
+    color: var(--white);
+  }
+  @media (max-width: 768px) {
+    .cardBox{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 40%;
+    }
+    
+}
+
+

@@ -1,0 +1,34 @@
+.input-check{
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+p{
+    margin-bottom: 0;
+}
+@media (max-width: 768px){
+    .group input{
+        width: 90%;
+    }
+    .card{
+        width: 100% !important;
+    }
+    .section-left{
+        width: 50% !important;
+    }
+    .section-right{
+        width: 50% !important;
+    }
+  }
+  @media (max-width: 992px){
+    .repo_card{
+        min-width: 50% !important;
+    }
+    .tr-Qty,.color{
+        display: none;
+    }
+  }
+  @media (max-width: 1200px){
+    .repo_card{
+        min-width: 30%;
+    }
+  }

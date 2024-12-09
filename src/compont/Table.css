@@ -1,0 +1,65 @@
+table{
+    width: 95% !important;
+    margin: auto;
+    table-layout: fixed;
+    border-radius: 50px !important;
+}
+table tr {
+    border-bottom: 3px solid var(--white);
+    height: 50px;
+    margin-top: 0px;
+}
+tbody tr:hover{
+    transform: translateY(1px);
+    animation: .4s intro-y-animation ease-in-out .33333s;
+    animation-fill-mode: forwards;
+    animation-delay: .6s;
+}
+
+
+.employee{
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    width: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+    margin: auto;
+  }
+  
+  .employee img {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    object-fit: cover;
+    min-height: 100%;
+  }
+  .css-1c5o7vy-MuiPagination-ul{
+    justify-content: center;
+  }
+  @media (max-width: 768px){
+ .w-houer{
+  display: none;
+ }
+    
+  }
+   @media (max-width: 992px){
+    .t-img{
+      display: none;
+    }
+    .table{
+      table-layout: fixed;
+    }
+    .table button span{
+      display: none;
+    }
+    .Address_client{
+      display: none;
+    }
+  }
+   @media (max-width: 1200px){
+    .table button span{
+      display: none;
+    } 
+  }

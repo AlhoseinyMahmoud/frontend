@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, #root, .App{
+ min-width: 100%;
+  min-height: 100%;
+}
+body, html{
+  background-color: #1e40afe6;
+  font-family: Roboto ;
+  color: #475569 ;
+  letter-spacing: .025em;
+  font-size: .875rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.25rem;
+}
+

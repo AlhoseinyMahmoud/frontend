@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  :root {
+    --blue: #1e40afe6;
+    --white: #f1f5f9;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --litepicker-container-months-color-bg: #fff;
+    --litepicker-container-months-box-shadow-color: #ddd;
+    --litepicker-footer-color-bg: #fafafa;
+    --litepicker-footer-box-shadow-color: #ddd;
+    --litepicker-tooltip-color-bg: #fff;
+    --litepicker-month-header-color: #333;
+    --litepicker-button-prev-month-color: #9e9e9e;
+    --litepicker-button-next-month-color: #9e9e9e;
+    --litepicker-button-prev-month-color-hover: #2196f3;
+    --litepicker-button-next-month-color-hover: #2196f3;
+    --litepicker-month-width: calc(var(--litepicker-day-width)* 7);
+    --litepicker-month-weekday-color: #9e9e9e;
+    --litepicker-month-week-number-color: #9e9e9e;
+    --litepicker-day-width: 38px;
+    --litepicker-day-color: #333;
+    --litepicker-day-color-hover: #2196f3;
+    --litepicker-is-today-color: #f44336;
+    --litepicker-is-in-range-color: #bbdefb;
+    --litepicker-is-locked-color: #9e9e9e;
+    --litepicker-is-start-color: #fff;
+    --litepicker-is-start-color-bg: #2196f3;
+    --litepicker-is-end-color: #fff;
+    --litepicker-is-end-color-bg: #2196f3;
+    --litepicker-button-cancel-color: #fff;
+    --litepicker-button-cancel-color-bg: #9e9e9e;
+    --litepicker-button-apply-color: #fff;
+    --litepicker-button-apply-color-bg: #2196f3;
+    --litepicker-button-reset-color: #909090;
+    --litepicker-button-reset-color-hover: #2196f3;
+    --litepicker-highlighted-day-color: #333;
+    --litepicker-highlighted-day-color-bg: #ffeb3b;
+  }
+  
+  .main {
+    position: absolute;
+    width: calc(99% - 200px);
+    left: 200px;
+    min-height: 110vh;
+    background: var(--white);
+    transition: 0.5s;
+    
+  }
+  
+  .main.navigation-hide {
+    width: calc(100% - 80px);
+    left: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .topbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 15px;
+  }
+  
+  .toggle {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  span.toggle__icon {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--blue);
+  }
+  
+  .search {
+    position: relative;
+    width: 230px;
+    height: 50px;
+    margin: 0 10px;
+    
+  }
+  
+  .search label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search label input {
+    width: 100%;
+    min-width: 130px;
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    border: 0;
+    background-color: #cbd5e180;
+    outline: none;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    /* box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .search label .material-symbols-outlined {
+    position: absolute;
+    color: var(--black2);
+    left: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  
+  .user {
+    position: relative;
+    min-width: 43px;
+    height: 43px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+  }
+  
+  .user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 768px) {
+    
+    .main {
+        position: absolute;
+        width: calc(100% - 0px);
+        left: 0px;
+        min-height: 100vh;
+        transition: 0.5s;
+      }
+    .main.navigation-hide {
+        left: 0;
+        width: 100%;
+      }
+      .search{
+        display: none;
+      }
+}
+@media (max-width: 992px) { 
+    .main {
+        position: absolute;
+        width: calc(100% - 80px);
+        left: 80px;
+        min-height: 100vh;
+        transition: 0.5s;
+        transition-behavior: normal;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        transition-property: all;
+    }
+    .main.navigation-hide {
+        left: 0;
+        width: 100%;
+      }
+ }
+ /* From Uiverse.io by 3bdel3ziz-T */ 
+/*making bell shape with one div */
+.bell {
+  border: 2.17px solid var(--black1);
+  border-radius: 10px 10px 0 0;
+  width: 13px;
+  height: 15px;
+  background: transparent;
+  display: block;
+  position: relative;
+  top: -3px;
+}
+.bell::before,
+.bell::after {
+  content: "";
+  background: var(--black1);
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2.17px;
+}
+.bell::before {
+  top: 100%;
+  width: 20px;
+}
+.bell::after {
+  top: calc(100% + 4px);
+  width: 7px;
+}
+/*container main styling*/
+.notification {
+  background: transparent;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 300ms;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*notifications number with before*/
+.notification::before {
+  content: "3";
+  color: white;
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+/*container background hover effect*/
+.notification:hover {
+  background: rgba(170, 170, 170, 0.062);
+}
+/*container animations*/
+.notification:hover > .bell-container {
+  animation: bell-animation 650ms ease-out 0s 1 normal both;
+}
+/*bell ring and scale animation*/
+@keyframes bell-animation {
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+    scale: 1.1;
+  }
+  60% {
+    transform: rotate(10deg);
+    scale: 1.1;
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
