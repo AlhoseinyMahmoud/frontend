@@ -33,7 +33,8 @@ export default function Navagation() {
                     </Link>
                 </li>
                 <li>
-                    <Link to={"/products"}>
+                    {/* products */}
+                    <Link to={"/products"}> 
                     <span className="icon material-symbols-outlined">production_quantity_limits</span>
                         <span className="title">Products</span>
                     </Link>
