@@ -78,7 +78,7 @@ export default function Table() {
     }
   };
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Number of employees per page
+  const itemsPerPage = 5; // Number of employees per page
   
   // Assuming filteredEmployees is your employee data array
   const totalEmployees = filteredEmployees.length;

@@ -6,6 +6,7 @@ import Employees from "./pages/employees";
 import Client from "./pages/client";
 import Products from "./pages/products";
 import Report from "./pages/report";
+import Repo from "./pages/Repo";
 
 function ProtectedRoute({ element }) {
   const token = localStorage.getItem("user");
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/client" element={<ProtectedRoute element={<Client />} />} />
         <Route path="/products" element={<ProtectedRoute element={<Products />} />} />
         <Route path="/report" element={<ProtectedRoute element={<Report />} />} />
+        <Route path="/repo" element={<ProtectedRoute element={<Repo />} />} />
         <Route path="*" element={"404"} /> {/* Custom 404 page */}
       </Routes>
     </BrowserRouter>

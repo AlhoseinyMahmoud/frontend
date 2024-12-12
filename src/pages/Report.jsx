@@ -29,6 +29,7 @@ export default function Report() {
   const totalValue = cart.reduce((sum, item) => sum + item.Product_Price * item.quantity, 0);
   const tax = totalValue * 0.1;
   const invoiceValue = totalValue + tax;
+  const [loading, setLoading] = useState(false);
   // Dialog handlers
   const handleClickOpen = (product) => {
     setSelectedProduct(product);
@@ -131,6 +132,30 @@ export default function Report() {
       );
       setFilteredProducts(searchResults);
     }}
+    const handleAddInvoice = async () => {
+      const invoiceData = cart.map((item) => ({
+        Product_Name: item.Product_Name,
+        Product_qty: item.quantity,
+        Product_Price: item.Product_Price,
+        Total_Price: item.total,
+      }));
+  
+      try {
+        setLoading(true);
+        for (const invoice of invoiceData) {
+          await axios.post("http://localhost:1337/api/fatoras", { data: invoice });
+        }
+        Swal.fire("Success", "Invoice added successfully.", "success");
+        setCart([]);
+      } catch (error) {
+        console.error("Error adding invoice:", error.response?.data || error.message);
+        Swal.fire("Error", error.response?.data?.error?.message || "Failed to add invoice.", "error");
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    
   return (
     <div className="container-fluid">
       <Navagation />
@@ -229,10 +254,7 @@ export default function Report() {
                 
             </div>
             <div>
-              <button className="btn btn-success w-100 rounded-2" onClick={(()=>{
-                Swal.fire("success","Invoice added successfully", "success");
-              })}
-                >Add Invoice</button>
+              <button className="btn btn-success w-100 rounded-2"  onClick={handleAddInvoice}>Add Invoice</button>
             </div>
           </aside>
         </div>

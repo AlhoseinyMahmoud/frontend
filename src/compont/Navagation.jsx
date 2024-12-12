@@ -46,9 +46,9 @@ export default function Navagation() {
                     </Link>
                 </li>               
                 <li>
-                    <Link to={""}>
-                        <span className="icon material-symbols-outlined">settings</span>
-                        <span className="title">Settings</span>
+                    <Link to={"/repo"}>
+                    <span className="icon material-symbols-outlined">bookmark_flag</span>
+                        <span className="title">Report</span>
                     </Link>
                 </li>
                 <li>
