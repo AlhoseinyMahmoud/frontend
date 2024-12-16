@@ -111,8 +111,9 @@ export default function SignIn() {
           </div>
           <div className="flex-row mt-3 remrmber">
             <div>
-              <input type="checkbox" ref={rememberCheckInput} />
+              <input type="checkbox" ref={rememberCheckInput} id='remember' />
               <label
+                htmlFor="remember"
                 className="mx-2"
                 style={{ color: rememberCheckInput.current?.checked ? 'blue' : 'inherit' }}
               >
